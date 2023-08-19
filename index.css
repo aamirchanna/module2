@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+  } 
+  /* container */
+  .container {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .box {
+    border: 1px solid black;
+    background-color: rgb(126, 127, 127);
+    height: 150px;
+  }
+
+  .title {
+    right: 0;
+    text-align: center;
+    border: 1px solid black;
+    padding: 4px;
+    width: fit-content;
+  }
+
+  .floating-tag {
+    margin-left: 100%;
+    margin-bottom: 8px;
+    display: block;
+    float: right;
+  }
+
+  #chicken {
+    background-color: pink;
+  }
+
+  #beef {
+    background-color: red;
+  }
+
+  #sushi {
+    background-color: yellow;
+  }
+
+  /* Larger Screens */
+  @media (min-width: 991px) {
+    .box {
+      width: 33%;
+    }
+  }
+
+  /* Medium Screens */
+  @media (min-width: 768px) and (max-width: 990px) {
+    .container {
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 45%;
+    }
+
+    .box:last-child {
+      width: 100%;
+    }
+  }
+
+  /* Smaller screens */
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .box {
+      width: 100%;
+    }
+  }
